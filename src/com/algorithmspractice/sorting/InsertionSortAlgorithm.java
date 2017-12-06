@@ -1,6 +1,6 @@
 package com.algorithmspractice.sorting;
 
-public class SortingAlgorithm {
+public class InsertionSortAlgorithm {
     public static void main(String args[]){
         int[] arr = {10, 9, 7, 2, 3, 11};
         printArray(insertionSort(arr, arr.length));
