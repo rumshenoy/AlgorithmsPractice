@@ -1,5 +1,5 @@
 package com.algorithmspractice.trees;
-
+//https://leetcode.com/problems/merge-two-binary-trees/description/
 public class MergeBinaryTree {
 
     public static void main(String args[]){
