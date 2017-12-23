@@ -1,19 +1,12 @@
 package com.algorithmspractice.sorting;
 
+import com.algorithmspractice.utils.HelperUtils;
+
 public class MergeSort {
     public static void main(String args[]){
         int[] input = {3, 1, 9, 2, 8, 7};
         mergeSort(input, 0, input.length-1);
-        printArray(input);
-    }
-
-    private static void printArray(int[] anArray) {
-        for (int i = 0; i < anArray.length; i++) {
-            if (i > 0) {
-                System.out.print(", ");
-            }
-            System.out.print(anArray[i]);
-        }
+        HelperUtils.printArray(input);
     }
 
     public static void mergeSort(int[] arr, int start, int end){
