@@ -1,5 +1,6 @@
 package com.algorithmspractice.string;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,18 +17,19 @@ public class LetterCombinationsOfAPhoneNumber {
     }
     public static List<String> letterCombinations(String digits) {
         String[] mapping = new String[]{"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-        LinkedList<String> result = new LinkedList<>();
+        LinkedList<String> queue = new LinkedList<>();
+        queue.add("");
 
-        result.add("");
-        for(int i =0; i < digits.length();i++){
+        for(int i =0; i < digits.length(); i++){
             int x = Character.getNumericValue(digits.charAt(i));
-            while(result.peek().length() == i){
-                String t = result.remove();
+            while(queue.peek().length() == i){
+                String t = queue.remove();
                 for(Character c: mapping[x].toCharArray()){
-                    result.add(t+c);
+                    queue.add(t+c);
                 }
             }
         }
-        return result;
+
+        return queue;
     }
 }
