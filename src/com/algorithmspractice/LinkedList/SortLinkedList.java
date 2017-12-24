@@ -1,17 +1,13 @@
 package com.algorithmspractice.LinkedList;
+
+import com.algorithmspractice.utils.HelperUtils;
+
 //Sort a linked list in O(n log n) time using constant space complexity.
 public class SortLinkedList {
     public static void main(String[] args) {
         ListNode root = createLinkedListFromArray(new int[]{5, 4, 3, 2, 1});
         root = sortList(root);
-        printLinkedList(root);
-    }
-
-    private static void printLinkedList(ListNode head) {
-        while(head != null){
-            System.out.print(head.val + "->");
-            head = head.next;
-        }
+        HelperUtils.printLinkedList(root);
     }
 
     private static ListNode createLinkedListFromArray(int[] ints) {
