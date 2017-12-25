@@ -18,4 +18,13 @@ public class HelperUtils {
             head = head.next;
         }
     }
+
+    public static ListNode createLinkedListFromArray(int[] ints) {
+        ListNode dummy = new ListNode(0), iter = dummy;
+        for(int i =0; i < ints.length; i++){
+            iter.next = new ListNode(ints[i]);
+            iter = iter.next;
+        }
+        return dummy.next;
+    }
 }
