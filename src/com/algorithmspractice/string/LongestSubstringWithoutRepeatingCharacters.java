@@ -1,4 +1,4 @@
-package com.algorithmspractice.array;
+package com.algorithmspractice.string;
 
 //Given a string, find the length of the longest substring without repeating characters.
 //Examples:

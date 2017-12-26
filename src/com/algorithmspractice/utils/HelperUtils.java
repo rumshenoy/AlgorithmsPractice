@@ -10,6 +10,7 @@ public class HelperUtils {
             }
             System.out.print(anArray[i]);
         }
+        System.out.println();
     }
 
     public static void printLinkedList(ListNode head) {
