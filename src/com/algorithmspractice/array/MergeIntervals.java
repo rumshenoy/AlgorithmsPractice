@@ -26,7 +26,7 @@ public class MergeIntervals {
             return o1.start < o2.start ? -1: o1.start == o2.start? 0: 1;
         }
     }
-    
+
     public List<Interval> merge(List<Interval> intervals) {
         LinkedList<Interval> merged = new LinkedList<>();
         Collections.sort(intervals, new IntervalComparator());
